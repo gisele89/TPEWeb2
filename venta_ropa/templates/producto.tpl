@@ -24,16 +24,16 @@
       <td>{$producto['nombre_categoria']}</td>
       <td>{$producto['precio']}</td>
       {if $Editable }
-      <td><a href="editarProducto/{$producto['id_producto']}">EDITAR</a></td>
-      <td><a href="borrarProducto/{$producto['id_producto']}">BORRAR</a></td>
+      <td><a class="btn btn-outline-secondary" href="editarProducto/{$producto['id_producto']}"role="button">EDITAR</a></td>
+      <td><a class="btn btn-outline-secondary" href="borrarProducto/{$producto['id_producto']}"role="button">BORRAR</a></td>
       {else}
-      <td><a href="detalleProducto/{$producto['id_producto']}">DETALLE</a></td>
+      <td><a class="btn btn-outline-secondary" href="detalleProducto/{$producto['id_producto']}">DETALLE</a></td>
       {/if}
     </tr>
       {/foreach}
   </tbody>
 </table>
       {if $Editable }
-      <a href="nuevoProducto">AGREGAR</a>
+      <a class="btn btn-secondary" href="nuevoProducto" role="button">AGREGAR</a>
       {/if}
 </div>

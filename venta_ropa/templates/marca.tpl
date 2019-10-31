@@ -21,16 +21,16 @@
       <td>{$marca['site_url']}</td>
       <td>{$marca['email']}</td>
       {if $Editable }
-      <td><a href="editarMarca/{$marca['id_marca']}">EDITAR</a></td>
-      <td><a href="borrarMarca/{$marca['id_marca']}">BORRAR</a></td>
+      <td><a class="btn btn-outline-secondary" href="editarMarca/{$marca['id_marca']}" role="button">EDITAR</a></td>
+      <td><a class="btn btn-outline-secondary" href="borrarMarca/{$marca['id_marca']}"role="button">BORRAR</a></td>
       {else}
-      <td><a href="detalleMarca/{$marca['id_marca']}">DETALLE</a></td>
+      <td><a class="btn btn-outline-secondary" href="detalleMarca/{$marca['id_marca']}">DETALLE</a></td>
       {/if}
     </tr>
       {/foreach}
   </tbody>
 </table>
       {if $Editable }
-      <a href="nuevaMarca">AGREGAR</a>
+      <a class="btn btn-secondary" href="nuevoMarca" role="button">AGREGAR</a>
       {/if}
 </div>

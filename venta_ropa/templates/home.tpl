@@ -1,6 +1,9 @@
 {include file="header.tpl"}
 <h1>{$Titulo}</h1>
-<a href="login">LOG IN</a>
+<div class="login">
+  <a class="btn btn-secondary" href="login" role="button">LOG IN</a>
+</div>
+
 {include file="producto.tpl"}
 {include file="marca.tpl"}
 {include file="footer.tpl"}

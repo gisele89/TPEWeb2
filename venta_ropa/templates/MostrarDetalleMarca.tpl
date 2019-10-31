@@ -19,5 +19,8 @@
           <input type="text" class="form-control" id="emailForm" name="emailForm" value="{$Marca["email"]}" readonly="readonly">
         </div>
       </form>
+      
+      <a class="btn btn-outline-secondary" href="../home" role="button">Volver</a>
+
     </div>
 {include file="footer.tpl"}

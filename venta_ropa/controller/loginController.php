@@ -33,22 +33,23 @@ class LoginController
       $user = $_POST["usuarioId"];
       $pass = $_POST["passwordId"];
       $dbUser = $this->model->getUser($user);
-      
+
       if(isset($dbUser)){
           //Generate hash pass with http://www.passwordtool.hu/php5-password-hash-generator
           //$hash = password_hash($pass, PASSWORD_DEFAULT);
-          if (password_verify($pass,$dbUser[0]["pass"])){
+
+          if (isset($dbUser[0]) && password_verify($pass,$dbUser[0]["pass"])){
           //if ($pass == $dbUser[0]["pass"]){
               //mostrar lista de tareas
               session_start();
               $_SESSION["User"] = $user;
               header(ADMIN);
           }else{
-            $this->view->mostrarLogin("Contraseña incorrecta");
+            $this->view->mostrarLogin("Usuario o Contraseña incorrectos");
           }
       }else{
         //No existe el usario
-        $this->view->mostrarLogin("No existe el usario");
+        $this->view->mostrarLogin("Usuario o Contraseña incorrectos");
       }
 
   }

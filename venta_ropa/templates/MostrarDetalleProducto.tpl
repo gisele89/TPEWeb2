@@ -5,7 +5,7 @@
 
     <div class="container">
       <h2>Detalle</h2>
-      <form>        
+      <form>
         <div class="form-group">
           <label for="nombreForm">Nombre</label>
           <input type="text" class="form-control" id="nombreForm" name="nombreForm" value="{$Producto["nombre"]}" readonly="readonly">
@@ -32,5 +32,8 @@
           </select>
         </div>
       </form>
+
+        <a class="btn btn-outline-secondary" href="../home" role="button">Volver</a>
+
     </div>
 {include file="footer.tpl"}

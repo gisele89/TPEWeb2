@@ -35,7 +35,7 @@
             {/foreach}
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button class="btn btn-outline-secondary" type="submit" class="btn btn-secondary">GUARDAR</button>
       </form>
     </div>
 {include file="footer.tpl"}

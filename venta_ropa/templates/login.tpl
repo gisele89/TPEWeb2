@@ -13,7 +13,7 @@
       <div class="">
         {$Message}
       </div>
-      <button type="submit" class="btn btn-primary">Login</button>
+      <button type="submit" class="btn btn-secondary">LOGIN</button>
     </form>
     </div>
 

@@ -19,7 +19,7 @@
           <label for="emailForm">Email</label>
           <input type="text" class="form-control" id="emailForm" name="emailForm" value="{$Marca["email"]}">
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button class="btn btn-outline-secondary" type="submit" class="btn btn-seconday">GUARDAR</button>
       </form>
     </div>
 {include file="footer.tpl"}

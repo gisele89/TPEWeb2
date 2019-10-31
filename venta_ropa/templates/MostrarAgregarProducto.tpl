@@ -31,7 +31,7 @@
             {/foreach}
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button class="btn btn-outline-secondary" type="submit" >AGREGAR</button>
       </form>
     </div>
 {include file="footer.tpl"}

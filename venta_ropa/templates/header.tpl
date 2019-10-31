@@ -7,7 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./styles/venta_ropa.css">
+  <!--   <div class="">
+      <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="./images/logo-burton.png" width="60" height="60" class="d-inline-block align-top" alt="">
+      Home
+    </a>
+  </nav>
+    </div>
+-->
     <title>{$Titulo}</title>
   </head>
   <body>

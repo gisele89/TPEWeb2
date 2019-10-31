@@ -29,7 +29,7 @@
           <input type="checkbox" class="form-check-input" id="completadaForm" name="completadaForm">
           <label class="form-check-label" for="completadaForm">Completada?</label>
         </div>
-        <button type="submit" class="btn btn-primary">Crear Tarea</button>
+        <button class="btn btn-outline-secondary" type="submit" class="btn btn-primary">Crear Tarea</button>
       </form>
     </div>
 {include file="footer.tpl"}

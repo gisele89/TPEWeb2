@@ -1,0 +1,19 @@
+.style-button {
+  color:#495057;
+  border: solid  1px;
+  border-color:#495057;
+  border-radius: 3px;
+  padding: 8px 17px;
+  box-shadow: 2px 2px 1px -1px rgba(122,122,122,1);
+}
+.style-button a:hover{
+  color:#fff;
+  background-color:#495057;
+}
+.login {
+  float:right;
+  margin-right: 20px;
+}
+.volver-style{
+
+}

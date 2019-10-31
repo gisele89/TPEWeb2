@@ -19,7 +19,7 @@
           <label for="emailForm">Email</label>
           <input type="text" class="form-control" id="emailForm" name="emailForm">
         </div>
-        <button type="submit" class="btn btn-primary">Agregar</button>
+        <button class="btn btn-outline-secondary" type="submit">AGREGAR</button>
       </form>
     </div>
 {include file="footer.tpl"}

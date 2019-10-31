@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 04:36:48
+/* Smarty version 3.1.33, created on 2019-10-31 01:11:45
   from 'C:\xampp\htdocs\venta_ropa\templates\marca.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc94340bb9ca4_22365829',
+  'unifunc' => 'content_5dba26c1895757_25075348',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '23fdbcfac7f7735591b2f22e12b548e39674ea18' => 
     array (
       0 => 'C:\\xampp\\htdocs\\venta_ropa\\templates\\marca.tpl',
-      1 => 1539916248,
+      1 => 1572480693,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc94340bb9ca4_22365829 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dba26c1895757_25075348 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1>Marcas</h1>
 <div class="container">
   <table class="table">
@@ -51,12 +51,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['marca']->value) {
       <td><?php echo $_smarty_tpl->tpl_vars['marca']->value['email'];?>
 </td>
       <?php if ($_smarty_tpl->tpl_vars['Editable']->value) {?>
-      <td><a href="editarMarca/<?php echo $_smarty_tpl->tpl_vars['marca']->value['id_marca'];?>
-">EDITAR</a></td>
-      <td><a href="borrarMarca/<?php echo $_smarty_tpl->tpl_vars['marca']->value['id_marca'];?>
-">BORRAR</a></td>
+      <td><a class="btn btn-outline-secondary" href="editarMarca/<?php echo $_smarty_tpl->tpl_vars['marca']->value['id_marca'];?>
+" role="button">EDITAR</a></td>
+      <td><a class="btn btn-outline-secondary" href="borrarMarca/<?php echo $_smarty_tpl->tpl_vars['marca']->value['id_marca'];?>
+"role="button">BORRAR</a></td>
       <?php } else { ?>
-      <td><a href="detalleMarca/<?php echo $_smarty_tpl->tpl_vars['marca']->value['id_marca'];?>
+      <td><a class="btn btn-outline-secondary" href="detalleMarca/<?php echo $_smarty_tpl->tpl_vars['marca']->value['id_marca'];?>
 ">DETALLE</a></td>
       <?php }?>
     </tr>
@@ -67,7 +67,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   </tbody>
 </table>
       <?php if ($_smarty_tpl->tpl_vars['Editable']->value) {?>
-      <a href="nuevaMarca">AGREGAR</a>
+      <a class="btn btn-secondary" href="nuevoMarca" role="button">AGREGAR</a>
       <?php }?>
 </div>
 <?php }
