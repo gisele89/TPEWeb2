@@ -5,7 +5,6 @@ class Router {
     private $controller;
     private $method;
     private $params;
-
     public function __construct($url, $verb, $controller, $method){
         $this->url = $url;
         $this->verb = $verb;
@@ -36,7 +35,6 @@ class Router {
         $controller = $this->controller;
         $method = $this->method;
         $params = $this->params;
-
         (new $controller())->$method($params);
     }
 }
