@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-04 22:39:13
+/* Smarty version 3.1.33, created on 2018-10-19 04:37:12
   from 'C:\xampp\htdocs\venta_ropa\templates\MostrarEditarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dc09a81d5a1a5_06194040',
+  'unifunc' => 'content_5bc943589ecd43_46962798',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7fc31443f881145c2781c9f501bee42018637266' => 
     array (
       0 => 'C:\\xampp\\htdocs\\venta_ropa\\templates\\MostrarEditarProducto.tpl',
-      1 => 1572480186,
+      1 => 1539819969,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5dc09a81d5a1a5_06194040 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bc943589ecd43_46962798 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -79,7 +79,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['marca']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </select>
         </div>
-        <button class="btn btn-outline-secondary" type="submit" class="btn btn-secondary">GUARDAR</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
       </form>
     </div>
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
