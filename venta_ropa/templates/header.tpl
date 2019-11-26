@@ -17,6 +17,7 @@
   </nav>
     </div>
 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript"></script>
     <title>{$Titulo}</title>
   </head>
   <body>
