@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-04 21:26:41
+/* Smarty version 3.1.33, created on 2019-10-28 23:28:59
   from 'C:\xampp\htdocs\venta_ropa\templates\MostrarAgregarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dc089817d75f3_94874703',
+  'unifunc' => 'content_5db76bab77b624_70963452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f572022652d3f24eb6ff7ccb20accab92e886c99' => 
     array (
       0 => 'C:\\xampp\\htdocs\\venta_ropa\\templates\\MostrarAgregarProducto.tpl',
-      1 => 1572480565,
+      1 => 1539825942,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5dc089817d75f3_94874703 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5db76bab77b624_70963452 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -68,7 +68,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['marca']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </select>
         </div>
-        <button class="btn btn-outline-secondary" type="submit" >AGREGAR</button>
+        <button type="submit" class="btn btn-primary">Agregar</button>
       </form>
     </div>
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

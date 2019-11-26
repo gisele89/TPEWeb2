@@ -1,7 +1,5 @@
 <?php
-
 class JSONView {
-
     /**
      * Responde cualquier coleccion de objetos en formato JSON.
      */
@@ -10,7 +8,6 @@ class JSONView {
         header("HTTP/1.1 {$status} " . $this->_requestStatus($status));
         echo json_encode($data);
     }
-
     /**
      * Asocia un mensaje a un codigo de respuesta.
      */
@@ -22,5 +19,4 @@ class JSONView {
         );
         return (isset($status[$code]))? $status[$code] : $status[500];
       }
-
 }
