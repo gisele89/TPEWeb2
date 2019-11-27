@@ -32,7 +32,7 @@
           </select>
         </div>
       </form>
-
+ {include file="mostrarComments_csr.tpl"}
         <a class="btn btn-outline-secondary" href="../home" role="button">Volver</a>
 
     </div>

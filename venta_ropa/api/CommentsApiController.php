@@ -30,7 +30,8 @@ class CommentsApiController{
 
   function addComment($params=null){
     $body= $this->get_data();
-    $idComment = $this->model->addComment($body->$comentario, $body->$fecha,$body->$puntuacion, $body->$id_usuario, $body->$id_producto);
+  //  $this->view->response($body,200);
+    $idComment = $this->model->addComment($body->comment, $body->fecha,$body->puntuacion, $body->id_usuario, $body->id_producto);
     $comment= $this->model->GetComment($idComment);
     if($comment){
       $this->view->response("Comentario agregado",200);
