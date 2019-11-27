@@ -28,6 +28,14 @@ class CommentsApiController{
     } else $this->view->response("El comentario no existe",404);
   }
 
+  function getCommentsForProduct($params=null){
+    $id_product = $params[':id'];
+    $comment= $this->model-> GetCommentsByProduct($id_product);
+    if($comment){
+      $this->view->response($comment,200);
+    } else $this->view->response("El comentario no existe",404);
+  }
+
   function addComment($params=null){
     $body= $this->get_data();
   //  $this->view->response($body,200);

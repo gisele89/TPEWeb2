@@ -6,8 +6,8 @@
             <span>{{comment.nombre}}</span>
             <span><p>{{comment.comment}}</p></span>
             <span>{{comment.puntuacion}}</span>
-            <span v-if="true">              
-                <input type="button" :data-id="comment.id_comment" class="btn-eliminar">Eliminar</input>
+            <span v-if="true">                
+                <a class="btn-eliminar" v-on:click="deleteComment(comment.id_comment)" href="#">Eliminar</a>
             </span>
        </li>
     </ul>

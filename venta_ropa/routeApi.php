@@ -8,9 +8,10 @@ $r = new Router();
 
 //-----------------------------------------------------------------------------------comment
 $r->addRoute("comments", "GET", "CommentsApiController", "getComments");
-$r->addRoute("comments/:ID", "GET", "CommentsApiController", "getComment");
-$r->addRoute("comments/:ID", "DELETE", "CommentsApiController", "deleteComment");
+$r->addRoute("comments/:id", "GET", "CommentsApiController", "getComment");
+$r->addRoute("comments/:id", "DELETE", "CommentsApiController", "deleteComment");
 $r->addRoute("comments", "POST", "CommentsApiController", "addComment");
+$r->addRoute("products/:id/comments", "GET", "CommentsApiController", "getCommentsForProduct");
 
 //Ruta por defecto.
 $r->setDefaultRoute("CommentsApiController", "getComments");

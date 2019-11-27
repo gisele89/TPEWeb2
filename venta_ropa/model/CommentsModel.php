@@ -25,9 +25,9 @@ class CommentModel
       $sentencia->execute(array($id));
       return $sentencia->fetch(PDO::FETCH_ASSOC);
   }
-  function GetCommentsByProduct($id_product){
-      $sentencia = $this->db->prepare( "select * from comment where id_product=?");
-      $sentencia->execute(array($id_product));
+  function GetCommentsByProduct($id_producto){
+      $sentencia = $this->db->prepare( "select comment.*, usuario.nombre from comment inner join usuario on usuario.id = comment.id_usuario where id_producto=?");
+      $sentencia->execute(array($id_producto));
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 

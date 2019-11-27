@@ -1,9 +1,6 @@
 "use strict";
 // event listeners
 document.querySelector("#form-comment").addEventListener('submit', addComment);
-document.querySelectorAll("[class=btn-eliminar]").forEach( function(elem) {
-    alert(elem);
-});
 // define la app Vue
 let app = new Vue({
     el: "#template-vue-comments",
@@ -11,20 +8,32 @@ let app = new Vue({
         subtitle: "Estos comentarios se renderizan desde el cliente usando Vue.js",
         comments: [],
         auth: true
+    },
+    methods: {
+        deleteComment(id) {
+           removeComment(id);
+        }
     }
 });
 
-function deleteComment(e){
-  e.preventDefault();
-  alert(this);
+function removeComment(id){
+  var url = "../api/comments/" + id;
+  fetch(url, {
+      method: 'DELETE'
+   })
+   .then(response => {
+       getComments();
+   })
+   .catch(error => console.log(error));
 }
 
 /**
  * Obtiene la lista de tareas de la API y las renderiza con Vue.
  */
 function getComments() {
-
-    fetch("../api/comments")
+    var idProducto = document.querySelector("input[name=id_producto]").value;
+    var url = "../api/products/"+idProducto+"/comments";    
+    fetch(url)
     .then(response => response.json())
     .then(comments => {
         app.comments = comments; // similar a $this->smarty->assign("tasks", $tasks)
