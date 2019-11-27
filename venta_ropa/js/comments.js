@@ -32,7 +32,7 @@ function removeComment(id){
  */
 function getComments() {
     var idProducto = document.querySelector("input[name=id_producto]").value;
-    var url = "../api/products/"+idProducto+"/comments";    
+    var url = "../api/products/"+idProducto+"/comments";
     fetch(url)
     .then(response => response.json())
     .then(comments => {
