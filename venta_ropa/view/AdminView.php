@@ -22,6 +22,12 @@ class AdminView
     $this->Smarty->display('templates/admin.tpl');
   }
 
+  function MostrarAdmin($usuarios){
+    $this->Smarty->assign('Titulo','Administrar usuarios');
+    $this->Smarty->assign('usuarios',$usuarios);
+    $this->Smarty->display('templates/administrarUsuarios.tpl');
+  }
+
 }
 
  ?>

@@ -10,10 +10,11 @@
         <label for="exampleInputPassword1">Password</label>
         <input type="password" class="form-control" name="passwordId" id="passwordId" placeholder="Password">
       </div>
-      <div class="">
+      <div class="error">
         {$Message}
       </div>
       <button type="submit" class="btn btn-secondary">LOGIN</button>
+      <a class="btn btn-outline-secondary" href="mostrarRegistracionUsuario">REGISTRATE</a>
     </form>
     </div>
 

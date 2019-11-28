@@ -1,6 +1,7 @@
 {include file="header.tpl"}
 
 <h1>{$Titulo}</h1>
+<a href="administrar">ADMIN</a>
 <a href="logout">LOG OUT</a>
 
 {include file="producto.tpl"}

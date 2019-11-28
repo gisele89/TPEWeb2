@@ -27,7 +27,10 @@ class ConfigApp
       'mostrarUsuarios'=> 'usuarioController#MostrarUsuario',
       'login'=> 'loginController#login',
       'logout'=> 'loginController#logout',
+      'administrar'=> 'AdminController#AdministrarUsuarios',
       'verificarLogin' => 'loginController#verificarLogin',
+      'registrarUsuario' => 'loginController#registrarUsuario',
+      'mostrarRegistracionUsuario' => 'loginController#mostrarRegistracionUsuario',
       'detalleProducto' => 'HomeController#MostrarDetalleProducto',
       'detalleMarca' => 'HomeController#MostrarDetalleMarca'
     ];
