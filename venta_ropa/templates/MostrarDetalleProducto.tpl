@@ -6,6 +6,12 @@
     <div class="container">
       <h2>Detalle</h2>
       <form>
+
+          <div class ="form-group" id="imagenes">
+            {foreach from=$images item=image}
+                <img src="../{$image -> path}" alt="Imagen del producto {$Producto["nombre"]} "  height="300px">                
+            {/foreach}
+        </div>
         <div class="form-group">
           <label for="nombreForm">Nombre</label>
           <input type="text" class="form-control" id="nombreForm" name="nombreForm" value="{$Producto["nombre"]}" readonly="readonly">

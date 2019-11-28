@@ -5,7 +5,7 @@
 
     <div class="container">
       <h2>Formulario</h2>
-      <form method="post" action="{$Home}/guardarProducto">
+      <form method="post" action="{$Home}/guardarProducto" enctype="multipart/form-data">
         <input type="hidden" class="form-control" id="idForm" name="idForm">
         <div class="form-group">
           <label for="nombreForm">Nombre</label>
@@ -30,6 +30,9 @@
                 <option value="{$marca['id_marca']}">{$marca['nombre']}</option>
             {/foreach}
           </select>
+        </div>
+        <div class="form-group">
+            <input type="file" name="images[]" multiple id="images"  class="form-control" placeholder="Imagen" aria-label="Recipient's username" aria-describedby="button-addon2">
         </div>
         <button class="btn btn-outline-secondary" type="submit" >AGREGAR</button>
       </form>

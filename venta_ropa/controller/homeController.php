@@ -37,8 +37,8 @@ class HomeController
       $id_producto = $param[0];
       $Producto = $this->modelProducto->GetProducto($id_producto);
       $Marcas = $this->modelMarca->GetMarcas();
-
-      $this->viewProducto->MostrarDetalleProducto("Ver Producto", $Producto, $Marcas);
+      $Imagenes = $this->modelProducto->GetImagenesByProducto($id_producto);
+      $this->viewProducto->MostrarDetalleProducto("Ver Producto", $Producto, $Marcas, $Imagenes);
   }
 
   function MostrarDetalleMarca($param){

@@ -20,17 +20,17 @@ class ProductoController extends SecuredController
   }
 
   function Home(){
-      $Productos = $this->model->GetProductos();
-      $this->view->Mostrar($this->Titulo, $Productos);
+    $Productos = $this->model->GetProductos();
+    $this->view->Mostrar($this->Titulo, $Productos);
   }
 
   function editarProducto($param){
-      $id_producto = $param[0];
+    $id_producto = $param[0];
 
-      $Producto = $this->model->GetProducto($id_producto);
-      $Marcas = $this->model->GetMarcas();
+    $Producto = $this->model->GetProducto($id_producto);
+    $Marcas = $this->model->GetMarcas();
 
-      $this->view->MostrarEditarProducto("Editar Producto", $Producto, $Marcas);
+    $this->view->MostrarEditarProducto("Editar Producto", $Producto, $Marcas);
   }
 
   function agregarProducto(){
@@ -58,9 +58,17 @@ class ProductoController extends SecuredController
     $material = $_POST["materialForm"];
     $id_marca = $_POST["marcaForm"];
 
-    $this->model->InsertarProducto($nombre,$precio,$descripcion,$material,$id_marca);
-
-    header(ADMIN);
+    $imagenes = $_FILES['images'];
+    $tmp_path = $_FILES['images']['tmp_name'];
+    $isImg = $this ->EsTipoImagen($imagenes);
+    if ($isImg == true ){
+      //var_dump($imagenes);
+      $this->model->InsertarProducto($nombre,$precio,$descripcion,$material,$id_marca,$imagenes);
+      header(ADMIN);
+    }
+    else{
+      echo "formato no aceptado";
+    }
   }
 
   function BorrarProducto($param){
@@ -73,6 +81,22 @@ class ProductoController extends SecuredController
     header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 
   }
+  private function EsTipoImagen($imagenes){ //compruebo las imagenes y las retorno a addSerie
+    $nroImagenes = count([$imagenes['type']]);
+    $isImg = true;
+    $i=0;
+    while ($i < $nroImagenes && $isImg){
+      $imagen_type = $imagenes['type'][$i];
+      if($imagen_type == "image/jpeg" || $imagen_type == "image/jpg" || $imagen_type == "image/png"){
+        $isImg = true;
+      }
+      else{
+        $isImg = false;
+      }
+      $i++;
+    }
+    return $isImg;
+  }
 }
 
- ?>
+?>

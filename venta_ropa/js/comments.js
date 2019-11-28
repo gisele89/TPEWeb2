@@ -10,13 +10,20 @@ let app = new Vue({
         auth: true
     },
     methods: {
-        deleteComment(id) {
-           removeComment(id);
+        deleteComment: function(id) {
+          var url = "../api/comments/" + id;
+          fetch(url, {
+              method: 'DELETE'
+           })
+           .then(response => {
+               getComments();
+           })
+           .catch(error => console.log(error));  //removeComment(id);
         }
     }
 });
 
-function removeComment(id){
+/*function removeComment(id){
   var url = "../api/comments/" + id;
   fetch(url, {
       method: 'DELETE'
@@ -25,7 +32,7 @@ function removeComment(id){
        getComments();
    })
    .catch(error => console.log(error));
-}
+}*/
 
 /**
  * Obtiene la lista de tareas de la API y las renderiza con Vue.

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 23:59:18
+/* Smarty version 3.1.33, created on 2019-11-28 01:00:35
   from 'C:\xampp\htdocs\venta_ropa\templates\MostrarDetalleProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5dddae46bd9438_20724550',
+  'unifunc' => 'content_5ddf0e23937c67_19204113',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '086a96cdefbe7b747821a2c3e675795d0e096f5b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\venta_ropa\\templates\\MostrarDetalleProducto.tpl',
-      1 => 1574809100,
+      1 => 1574899090,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5dddae46bd9438_20724550 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ddf0e23937c67_19204113 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,6 +34,21 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     <div class="container">
       <h2>Detalle</h2>
       <form>
+
+          <div class ="form-group" id="imagenes">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['images']->value, 'image');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['image']->value) {
+?>
+                <img src="../<?php echo $_smarty_tpl->tpl_vars['image']->value->path;?>
+" alt="Imagen del producto <?php echo $_smarty_tpl->tpl_vars['Producto']->value["nombre"];?>
+ "  height="300px">                
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        </div>
         <div class="form-group">
           <label for="nombreForm">Nombre</label>
           <input type="text" class="form-control" id="nombreForm" name="nombreForm" value="<?php echo $_smarty_tpl->tpl_vars['Producto']->value["nombre"];?>
