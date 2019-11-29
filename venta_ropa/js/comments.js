@@ -26,23 +26,9 @@ let app = new Vue({
     }
 });
 
-/*function removeComment(id){
-  var url = "../api/comments/" + id;
-  fetch(url, {
-      method: 'DELETE'
-   })
-   .then(response => {
-       getComments();
-   })
-   .catch(error => console.log(error));
-}*/
-
-/**
- * Obtiene la lista de tareas de la API y las renderiza con Vue.
- */
 function getComments() {
     let idProducto = document.querySelector("input[name=id_producto]").value;
-    var url = "../api/products/"+idProducto+"/comments";
+    let url = "../api/products/"+idProducto+"/comments";
     fetch(url)
     .then(response => response.json())
     .then(comments => {
@@ -56,7 +42,7 @@ function getComments() {
  */
 function addComment(e) {
     e.preventDefault();
-    var date = new Date();
+    let date = new Date();
     let data = {
         comment:  document.querySelector("textarea[name=comment]").value,
         puntuacion:  document.querySelector("input[name=puntuacion]:checked").value,

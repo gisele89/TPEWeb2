@@ -24,8 +24,8 @@ class LoginController
   }
 
   function logout(){
-    //session_start();
-    //session_destroy();
+    session_start();
+    session_destroy();
     header(HOME);
   }
 
@@ -41,8 +41,6 @@ class LoginController
         //$hash = password_hash($pass, PASSWORD_DEFAULT);
 
         if (password_verify($pass,$usuario->pass)){
-          //if ($pass == $dbUser[0]["pass"]){
-          //mostrar lista de tareas
           session_start();
           $_SESSION["USERNAME"] = $nombre_usuario;
           $_SESSION['ID_USER'] = $usuario ->id;
@@ -65,14 +63,12 @@ class LoginController
     $email = $_POST['email'];
 
     if(!empty($nombre) && !empty($email) && !empty($pass)){
-      $usuario = $this-> model-> GetUserByEmail($email);//busco que si existe en la BBDD un usuario con ese email
+      $usuario = $this-> model-> GetUserByEmail($email);
       if($usuario == null){//sino existe
         //transformo la pass a hash
         $hash_pass = password_hash($pass, PASSWORD_DEFAULT);//hash a la password
         $this -> model -> InsertarUsuario($nombre, $email, $hash_pass);//lo envio al model
-        //hasta acá anda
         $usuario = $this-> model-> GetUserByEmail($email);
-        //obtengo el email de la BBDD igual al ingresado por el usuario
         if((!empty($usuario) && password_verify($pass, $usuario->pass))){
           session_start();
           $_SESSION['ID_USER'] = $usuario->id;
@@ -80,11 +76,11 @@ class LoginController
           $_SESSION['USER_ADMIN'] = $usuario->isAdmin;
 
           header(ADMIN);
-          die();//Luego de una redirección se suele llamar a la función die() para forzar terminar la ejecución del script.
+          die();
         }
         else {
           $this -> view -> mostrarRegistracion("El usuario no pudo ser registrado");
-          // echo "Login incorrecto";
+
           die();
         }
       }
@@ -95,9 +91,8 @@ class LoginController
       }
     }
     else{
-      // $incorrecto = "faltaron completar campos obligatorios";
-      $this -> view -> mostrarRegistracion("Falta completar algunos campos");                     // echo "Login incorrecto";
-      die();
+
+      $this -> view -> mostrarRegistracion("Falta completar algunos campos");                  
     }
   }
 

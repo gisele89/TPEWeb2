@@ -34,8 +34,7 @@ class UsuarioController extends SecuredController
     header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
   }
   function BorrarUsuario($params){
-    //$this ->LogInController ->checkLoggedIn();
-    //$this ->LogInController ->verifyAdmin();
+
     $id_usuario = $params [0];
     //var_dump("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]) ."/administrar");
     $this->model->BorrarUsuario($id_usuario);
@@ -44,15 +43,13 @@ class UsuarioController extends SecuredController
   }
   function ConvertirEnAdmin($params){
     $id_usuario = $params [0];
-    //$this ->LogInController ->checkLoggedIn();
-    //$this ->LogInController ->verifyAdmin();
+
     $this ->model ->ConvertirEnAdmin($id_usuario, 1);
     header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]) ."/administrar");
   }
   function QuitarPermisosAdmin($params){
     $id_usuario = $params [0];
-    //$this ->LogInController ->checkLoggedIn();
-    //$this ->LogInController ->verifyAdmin();
+  
     $this ->model ->ConvertirEnAdmin($id_usuario, 0);
     header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]) ."/administrar");
   }

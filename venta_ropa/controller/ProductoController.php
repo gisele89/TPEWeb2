@@ -116,7 +116,7 @@ class ProductoController extends SecuredController
     header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 
   }
-  private function EsTipoImagen($imagenes){ //compruebo las imagenes y las retorno a addSerie
+  private function EsTipoImagen($imagenes){ 
     $nroImagenes = count([$imagenes['type']]);
     $isImg = true;
     $i=0;

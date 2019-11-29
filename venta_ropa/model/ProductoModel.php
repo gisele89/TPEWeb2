@@ -72,7 +72,7 @@ class ProductoModel
     $nroImagenes = count($imagenes['name']);
     for ($i = 0; $i < $nroImagenes; $i++){
       // var_dump(pathinfo($images['name'][$i],PATHINFO_EXTENSION)); die;
-      $path_imagen = 'imagenes/' . uniqid() . "." . strtolower(pathinfo($imagenes['name'][$i],PATHINFO_EXTENSION));// preguntar como digo que pueden ser jpg, jpeg, png
+      $path_imagen = 'imagenes/' . uniqid() . "." . strtolower(pathinfo($imagenes['name'][$i],PATHINFO_EXTENSION));
       move_uploaded_file($imagenes['tmp_name'][$i], $path_imagen);
       $sentencia-> execute(array($id_producto, $path_imagen));
     }
