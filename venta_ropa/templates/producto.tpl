@@ -8,12 +8,11 @@
       <th scope="col">Descripcion</th>
       <th scope="col">Marca</th>
       <th scope="col">Precio</th>
-      {if $Editable }
+      {if $isAdmin }
       <th scope="col">Editar</th>
       <th scope="col">Borrar</th>
-      {else}
-      <th scope="col">Detalle</th>
       {/if}
+      <th scope="col">Detalle</th>      
     </tr>
   </thead>
   <tbody>
@@ -23,17 +22,16 @@
       <td>{$producto['descripcion']}</td>
       <td>{$producto['nombre_categoria']}</td>
       <td>{$producto['precio']}</td>
-      {if $Editable }
-      <td><a class="btn btn-outline-secondary" href="editarProducto/{$producto['id_producto']}"role="button">EDITAR</a></td>
-      <td><a class="btn btn-outline-secondary" href="borrarProducto/{$producto['id_producto']}"role="button">BORRAR</a></td>
-      {else}
-      <td><a class="btn btn-outline-secondary" href="detalleProducto/{$producto['id_producto']}">DETALLE</a></td>
+      {if $isAdmin }
+        <td><a class="btn btn-outline-secondary" href="editarProducto/{$producto['id_producto']}"role="button">EDITAR</a></td>
+        <td><a class="btn btn-outline-secondary" href="borrarProducto/{$producto['id_producto']}"role="button">BORRAR</a></td>
       {/if}
+      <td><a class="btn btn-outline-secondary" href="detalleProducto/{$producto['id_producto']}">DETALLE</a></td>
     </tr>
       {/foreach}
   </tbody>
 </table>
-      {if $Editable }
-      <a class="btn btn-secondary" href="nuevoProducto" role="button">AGREGAR</a>
+      {if $isAdmin }
+        <a class="btn btn-secondary" href="nuevoProducto" role="button">AGREGAR</a>
       {/if}
 </div>

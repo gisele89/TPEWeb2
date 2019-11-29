@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-19 04:36:48
+/* Smarty version 3.1.33, created on 2019-11-27 00:24:14
   from 'C:\xampp\htdocs\venta_ropa\templates\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bc94340c4d005_98427063',
+  'unifunc' => 'content_5dddb41e533c60_17184439',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '334d1b427020feda476c81c5a405735e7a32e09c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\venta_ropa\\templates\\footer.tpl',
-      1 => 1539221207,
+      1 => 1574810650,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bc94340c4d005_98427063 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5dddb41e533c60_17184439 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -33,6 +33,7 @@ function content_5bc94340c4d005_98427063 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"><?php echo '</script'; ?>
 >
+    
   </body>
 </html>
 <?php }

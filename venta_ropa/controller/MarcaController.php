@@ -29,30 +29,40 @@ class MarcaController extends SecuredController
   }
 
   function EditarMarca($param){
+    if(isset($param) && $param[0] != ""){
       $id_marca = $param[0];
       $Marca = $this->model->GetMarca($id_marca);
       $this->view->MostrarEditarMarca("Editar Marca", $Marca);
+    }
   }
 
   function GuardarNuevaMarca(){
+    if(isset($_POST["nombreForm"]) && $_POST["nombreForm"] != "" &&
+       isset($_POST["site_urlForm"]) && $_POST["site_urlForm"] != "" &&
+       isset($_POST["emailForm"]) && $_POST["emailForm"] != ""){
+      $nombre = $_POST["nombreForm"];
+      $site_url = $_POST["site_urlForm"];
+      $email = $_POST["emailForm"];
 
-    $nombre = $_POST["nombreForm"];
-    $site_url = $_POST["site_urlForm"];
-    $email = $_POST["emailForm"];
+      $this->model->InsertarMarca($nombre,$site_url,$email);
 
-    $this->model->InsertarMarca($nombre,$site_url,$email);
-
-    header(ADMIN);
+      header(ADMIN);
+    }
   }
 
   function GuardarEditarMarca(){
-    $id_marca = $_POST["idForm"];
-    $nombre = $_POST["nombreForm"];
-    $site_url = $_POST["site_urlForm"];
-    $email = $_POST["emailForm"];
-    $this->model->GuardarEditarMarca($id_marca,$nombre,$site_url,$email);
+    if(isset($_POST["idForm"]) && $_POST["idForm"] != "" &&
+       isset($_POST["nombreForm"]) && $_POST["nombreForm"] != "" &&
+       isset($_POST["site_urlForm"]) && $_POST["site_urlForm"] != "" &&
+       isset($_POST["emailForm"]) && $_POST["emailForm"] != ""){
+      $id_marca = $_POST["idForm"];
+      $nombre = $_POST["nombreForm"];
+      $site_url = $_POST["site_urlForm"];
+      $email = $_POST["emailForm"];
+      $this->model->GuardarEditarMarca($id_marca,$nombre,$site_url,$email);
 
-    header(ADMIN);
+      header(ADMIN);
+   }
   }
 
   function BorrarMarca($param){

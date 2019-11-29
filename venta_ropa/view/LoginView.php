@@ -16,6 +16,13 @@ class LoginView
 
     $this->Smarty->display('templates/login.tpl');
   }
+
+  function mostrarRegistracion($message = ''){
+    $this->Smarty->assign('Titulo',"Registracion"); // El 'Titulo' del assign puede ser cualquier valor
+    $this->Smarty->assign('Message',$message); // El 'Titulo' del assign puede ser cualquier valor
+
+    $this->Smarty->display('templates/registrarUsuario.tpl');
+  }
 }
 
  ?>

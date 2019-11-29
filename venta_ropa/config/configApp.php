@@ -15,6 +15,7 @@ class ConfigApp
       'home'=> 'HomeController#Home',
       'borrarProducto'=> 'ProductoController#BorrarProducto',
       'borrarMarca'=> 'MarcaController#BorrarMarca',
+      'borrarImagen'=> 'ProductoController#BorrarImagen',
       'editarProducto'=> 'ProductoController#editarProducto',
       'editarMarca'=> 'MarcaController#editarMarca',
       'nuevoProducto'=> 'ProductoController#agregarProducto',
@@ -27,11 +28,16 @@ class ConfigApp
       'mostrarUsuarios'=> 'usuarioController#MostrarUsuario',
       'login'=> 'loginController#login',
       'logout'=> 'loginController#logout',
+      'administrar'=> 'AdminController#AdministrarUsuarios',
       'verificarLogin' => 'loginController#verificarLogin',
+      'registrarUsuario' => 'loginController#registrarUsuario',
+      'mostrarRegistracionUsuario' => 'loginController#mostrarRegistracionUsuario',
+      'eliminarUsuario'=>'usuarioController#BorrarUsuario',
+      'convertirEnAdmin'=>'usuarioController#ConvertirEnAdmin',
+      'quitarPermisosAdmin'=>'usuarioController#QuitarPermisosAdmin',
       'detalleProducto' => 'HomeController#MostrarDetalleProducto',
       'detalleMarca' => 'HomeController#MostrarDetalleMarca'
     ];
 
 }
-
  ?>

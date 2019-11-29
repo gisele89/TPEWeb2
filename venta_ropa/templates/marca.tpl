@@ -6,7 +6,7 @@
       <th scope="col">Nombre</th>
       <th scope="col">SiteUrl</th>
       <th scope="col">Email</th>
-      {if $Editable }
+      {if $isAdmin }
       <th scope="col">Editar</th>
       <th scope="col">Borrar</th>
       {else}
@@ -20,7 +20,7 @@
       <td>{$marca['nombre']}</td>
       <td>{$marca['site_url']}</td>
       <td>{$marca['email']}</td>
-      {if $Editable }
+      {if $isAdmin }
       <td><a class="btn btn-outline-secondary" href="editarMarca/{$marca['id_marca']}" role="button">EDITAR</a></td>
       <td><a class="btn btn-outline-secondary" href="borrarMarca/{$marca['id_marca']}"role="button">BORRAR</a></td>
       {else}
@@ -30,7 +30,7 @@
       {/foreach}
   </tbody>
 </table>
-      {if $Editable }
+      {if $isAdmin }
       <a class="btn btn-secondary" href="nuevoMarca" role="button">AGREGAR</a>
       {/if}
 </div>

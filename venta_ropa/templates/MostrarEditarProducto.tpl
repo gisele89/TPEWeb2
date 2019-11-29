@@ -1,11 +1,15 @@
 {include file="header.tpl"}
 
     <h1>{$Titulo}</h1>
-
-
     <div class="container">
       <h2>Formulario</h2>
       <form method="post" action="{$Home}/guardarEditar">
+        <div class ="form-group" id="imagenes">
+          {foreach from=$images item=image}
+              <img src="../{$image -> path}" alt="Imagen del producto {$Producto["nombre"]} "  height="300px">
+             <!-- <a class="btn btn-outline-secondary" href="borrarImagen/{$image -> id_imagen}/{$Producto["id_producto"]}"role="button">ELIMINAR</a> -->
+          {/foreach}
+       </div>
         <input type="hidden" class="form-control" id="idForm" name="idForm" value="{$Producto["id_producto"]}">
         <div class="form-group">
           <label for="nombreForm">Nombre</label>

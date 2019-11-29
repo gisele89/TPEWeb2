@@ -20,25 +20,29 @@ class ProductoView
     $this->Smarty->display('templates/producto.tpl');
   }
 
-  function MostrarEditarProducto($Titulo, $Producto, $Marcas){
+  function MostrarEditarProducto($Titulo, $Producto, $Marcas, $Imagenes, $isAdmin){
 
     $this->Smarty->assign('Titulo',$Titulo); // El 'Titulo' del assign puede ser cualquier valor
     $this->Smarty->assign('Producto',$Producto);
     $this->Smarty->assign('Marcas',$Marcas);
+    $this->Smarty->assign('images',$Imagenes);
     $this->Smarty->assign('Home',"http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
-
-    $smarty->debugging = true;
+    $this->Smarty->assign('isAdmin',$isAdmin);
     $this->Smarty->display('templates/MostrarEditarProducto.tpl');
   }
 
-  function MostrarDetalleProducto($Titulo, $Producto, $Marcas){
+  function MostrarDetalleProducto($Titulo, $Producto, $Marcas, $Imagenes, $id_usuario, $isAdmin, $IsUserLogged){
 
     $this->Smarty->assign('Titulo',$Titulo); // El 'Titulo' del assign puede ser cualquier valor
     $this->Smarty->assign('Producto',$Producto);
     $this->Smarty->assign('Marcas',$Marcas);
+    $this->Smarty->assign('images',$Imagenes);
+    $this->Smarty->assign('id_usuario',$id_usuario);
+    $this->Smarty->assign('isAdmin',$isAdmin);
+    $this->Smarty->assign('IsUserLogged',$IsUserLogged);
     $this->Smarty->assign('Home',"http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 
-    
+
     $this->Smarty->display('templates/MostrarDetalleProducto.tpl');
   }
 

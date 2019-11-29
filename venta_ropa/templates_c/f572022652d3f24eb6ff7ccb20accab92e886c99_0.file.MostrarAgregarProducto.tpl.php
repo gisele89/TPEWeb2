@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-10-28 23:28:59
+/* Smarty version 3.1.33, created on 2019-11-28 00:01:18
   from 'C:\xampp\htdocs\venta_ropa\templates\MostrarAgregarProducto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5db76bab77b624_70963452',
+  'unifunc' => 'content_5ddf003e19a0c2_98983013',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f572022652d3f24eb6ff7ccb20accab92e886c99' => 
     array (
       0 => 'C:\\xampp\\htdocs\\venta_ropa\\templates\\MostrarAgregarProducto.tpl',
-      1 => 1539825942,
+      1 => 1574895392,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5db76bab77b624_70963452 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ddf003e19a0c2_98983013 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -33,7 +33,7 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     <div class="container">
       <h2>Formulario</h2>
       <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['Home']->value;?>
-/guardarProducto">
+/guardarProducto" enctype="multipart/form-data">
         <input type="hidden" class="form-control" id="idForm" name="idForm">
         <div class="form-group">
           <label for="nombreForm">Nombre</label>
@@ -68,7 +68,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['marca']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Agregar</button>
+        <div class="form-group">
+            <input type="file" name="images[]" multiple id="images"  class="form-control" placeholder="Imagen" aria-label="Recipient's username" aria-describedby="button-addon2">
+        </div>
+        <button class="btn btn-outline-secondary" type="submit" >AGREGAR</button>
       </form>
     </div>
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
